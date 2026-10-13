@@ -3,6 +3,14 @@ title: About Us
 permalink: /about/
 ---
 
+### Casey Rosenthal
+Software engineer, architect, and leader known for writing the definition of [Chaos Engineering](https://principlesofchaos.org/), building and managing the Chaos Engineering Team at Netflix, starting the conferences on the subject, getting the industry to adopt the process, and literally writing the book on the subject [Chaos Engineering: System Resiliency in Practice](https://amzn.to/3bjsRJ9). CEO/Cofounder of several startups, all focused on reliability and security. Worked at two hyperscalars: At Netflix, was simultaneously the Engineering Manager of the Chaos Engineering Team, the Traffic Engineering Team, and others. At Oracle, created the Safety program as executed by the Cloud Safety team for all of OCI. Extensive experiences with distributed systems, artificial intelligence, translating novel algorithms and academia into working models. Matriculated at Harvard, Ursinus College, Worcester Polytechnic Institute, University of Pennsylvania, Ohio University, University of Southern Maine, Lund University in Sweden studying Computer Science, Philosophy, and Safety Systems.
+
+### Courtney Nash
+Seasoned tech industry expert with 25+ years in editing, content creation, acquisition, research, strategy, and execution. As someone who used to study the neuroscience behind how people learn, I'm now paying close attention to the interaction between computers and humans, and their often unexamined consequences. Currently running the VOID, a research company making the software industry better, safer, and more resilient.Previously was Director of strategic content for O'Reilly Media.
+
+### Why Us?
+
 We are trained in the field of Resilience Engineering. We study things like nuclear power plants, air traffic control systems, hospitals, aircraft carriers—critical and complex systems where human lives are at stake, yet accidents are rare.
 
 We have too much to say about Resilience Engineering as it pertains to AI, so we will highlight just three things that have a bearing on how we interpret the development of AI systems:
