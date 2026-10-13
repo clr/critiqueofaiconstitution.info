@@ -1,8 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="locked">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    html.locked,html.locked body{background:#000}
+    html.locked body>*{display:none!important}
+    #unlock{display:none;margin:30vh auto 0;padding:10px 20px;font:16px system-ui,sans-serif;cursor:pointer}
+    html.locked #unlock{display:block!important}
+  </style>
+  <script>
+    // Light deterrent only: the password is visible in this page's source.
+    window.onload = function () {
+      var PASSWORD = "public8shun", KEY = "site-unlocked";
+      var root = document.documentElement;
+      function unlocked() { try { return sessionStorage.getItem(KEY) === "1"; } catch (e) { return false; } }
+      function ask() {
+        var answer = window.prompt("Password:");
+        if (answer === PASSWORD) {
+          try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
+          root.classList.remove("locked");
+          return true;
+        }
+        return false;
+      }
+      if (unlocked()) { root.classList.remove("locked"); return; }
+      var btn = document.createElement("button");
+      btn.id = "unlock"; btn.textContent = "Enter password";
+      btn.onclick = ask;
+      document.body.appendChild(btn);
+      ask();
+    };
+  </script>
   <title>{% if page.title and page.url != "/" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

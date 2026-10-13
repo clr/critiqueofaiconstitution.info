@@ -8,7 +8,7 @@ Static site served by GitHub Pages (Jekyll builds it automatically; no build ste
 |---|---|
 | Overview (home) | `index.md` |
 | About Us | `about.md` |
-| Section 1–7 | `_sections/section-1.md` … `_sections/section-7.md` |
+| Sections 1–8 | `_sections/section-1.md` … `_sections/section-8.md` |
 
 Each file starts with a short block between `---` lines (title, order, optional summary). Edit the title there to rename a page and its navigation entry; everything below is Markdown. The nav and the section list on the Overview page update automatically.
 
