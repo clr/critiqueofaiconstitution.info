@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  {% if page.url == "/" %}
+  {% assign secs = site.sections | sort: "order" %}
+  <h2>Sections</h2>
+  <ol class="section-list">
+    {% for s in secs %}
+    <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a>{% if s.summary %}<span>{{ s.summary }}</span>{% endif %}</li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</article>

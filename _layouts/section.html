@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign secs = site.sections | sort: "order" %}
+<article>
+  <p class="crumb"><a href="{{ '/' | relative_url }}">Overview</a> / Section {{ page.order }}</p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+<nav class="pager" aria-label="Previous and next section">
+  {% for s in secs %}{% if s.url == page.url %}
+    {% assign i = forloop.index0 %}
+  {% endif %}{% endfor %}
+  {% assign prev_i = i | minus: 1 %}
+  {% assign next_i = i | plus: 1 %}
+  {% if i > 0 %}<a class="prev" href="{{ secs[prev_i].url | relative_url }}">&larr; {{ secs[prev_i].title }}</a>{% else %}<span></span>{% endif %}
+  {% if next_i < secs.size %}<a class="next" href="{{ secs[next_i].url | relative_url }}">{{ secs[next_i].title }} &rarr;</a>{% endif %}
+</nav>

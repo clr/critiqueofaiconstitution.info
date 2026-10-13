@@ -1,0 +1,19 @@
+title: Critique of the AI Constitution
+description: A critical examination of the AI constitution, in seven essays.
+url: "https://critiqueofaiconstitution.info"
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+
+collections:
+  sections:
+    output: true
+    permalink: /overview/:name/
+
+defaults:
+  - scope: { path: "", type: "sections" }
+    values: { layout: section }
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
